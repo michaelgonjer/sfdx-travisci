@@ -11,4 +11,4 @@ before_install:
 script:
 - ls
 - echo $HOME
-- /home/travis/pmd-bin-6.5.0/bin/run.sh -d . -f text -R PMD/rulesets/apex-ruleset.xml
+- /home/travis/pmd-bin-6.5.0/bin/run.sh pmd -d . -f text -R PMD/rulesets/apex-ruleset.xml
