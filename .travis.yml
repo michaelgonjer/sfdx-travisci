@@ -1,6 +1,4 @@
 sudo: true
-os: trusty
-cache: false
 
 before_install:
 - cd $HOME
@@ -9,6 +7,4 @@ before_install:
 - alias pmd="$HOME/pmd-bin-6.5.0/bin/run.sh pmd"
 
 script:
-- ls
-- echo $HOME
 - /home/travis/pmd-bin-6.5.0/bin/run.sh pmd -d . -f text -rulesets apex-ruleset
