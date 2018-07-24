@@ -3,10 +3,16 @@ os: trusty
 cache: false
 
 before_install:
-- cd $Home
+- cd $HOME
 - wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F6.5.0/pmd-bin-6.5.0.zip
 - unzip pmd-bin-6.5.0.zip
-- alias pmd="/pmd-bin-6.5.0/bin/run.sh pmd"
+- alias pmd="$HOME/pmd-bin-6.5.0/bin/run.sh pmd"
+- pwd
+- echo pmd
+- echo $HOME
 
 script:
+- pwd
+- echo pmd
+- echo $HOME
 - pmd -d . -f text -R PMD/rulesets/apex-ruleset.xml
