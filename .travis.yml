@@ -2,10 +2,8 @@ sudo: true
 os: trusty
 cache: false
 
-env:
-- URL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
-
 before_install:
+- cd $Home
 - wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F6.5.0/pmd-bin-6.5.0.zip
 - unzip pmd-bin-6.5.0.zip
 - alias pmd="/pmd-bin-6.5.0/bin/run.sh pmd"
